@@ -31,7 +31,7 @@ function kgToGrCalculator(a) {
 
 
 //Exercise 4 : Welcome
-John has just signed in to your website and you want to welcome him.
+// John has just signed in to your website and you want to welcome him.
 
 //Create a Bootstrap Navbar in your HTML file.
 //In your js file, create a self invoking function that
@@ -39,8 +39,8 @@ John has just signed in to your website and you want to welcome him.
 //The function should add a div in the nabvar,
 //displaying the name of the user and his profile picture.
 
-function welcome(userName) {
-	div userName
-	img
-}
+// function welcome(userName) {
+// 	div userName
+// 	img
+// }
 

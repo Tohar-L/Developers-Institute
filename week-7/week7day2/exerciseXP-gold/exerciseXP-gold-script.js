@@ -36,8 +36,6 @@ const newArrayNum = arrayNum.map((num, i) => {
 //Exercise 4 : Nested Arrays
 //1. modify it to look like this array: [1,2,3,[4],[5]].
 const array = [[1],[2],[3],[[[4]]],[[[5]]]];
-// const newArray = [array[0][0], array[1][0], array[2][0], array[3][0][0], array[4][0][0]];
-// console.log(newArray);
 
 // Bonus Try to do it on one line.
 newArray = ()=> {console.log([array[0][0], array[1][0], array[2][0], array[3][0][0], array[4][0][0]]);}
