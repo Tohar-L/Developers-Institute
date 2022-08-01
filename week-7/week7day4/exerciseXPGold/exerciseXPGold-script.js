@@ -17,3 +17,39 @@ printFullName =(studentObj)=> {
 
 
 // Exercise 2 : Keys And Values
+//Create a function that takes an object and returns the
+//keys and values as separate arrays.
+keysAndValues = (obj) => {
+	console.log(Object.keys(obj));
+	console.log(Object.values(obj));
+}
+
+keysAndValues({ a: 1, b: 2, c: 3 });
+keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" });
+keysAndValues({ key1: true, key2: false, key3: undefined });
+
+
+
+
+// Exercise 3 : Counter Class
+// Analyze the code below, what will be the output?
+class Counter {
+	constructor() {
+		this.count = 0;
+	}
+
+	increment() {
+		this.count++;
+	}
+}
+
+const counterOne = new Counter();
+counterOne.increment();
+counterOne.increment();
+
+const counterTwo = counterOne;
+counterTwo.increment();
+
+console.log(counterOne.count);
+//the output will be 3. once we let the counterTwo be counterOne, it is exactly
+//like doing the operations on counterOne.
