@@ -102,11 +102,12 @@ a{
 	margin: 20px;
 	margin-top: 20px;
 	padding: 20px;
-	background-image: url(images/card-pattern.png);
+	background-image: url(images/card-pattern.png);	
 }
 
 h2{
 	font-family:fantasy;
+	color: yellow;
 	font-size: 1em;
 }
 
