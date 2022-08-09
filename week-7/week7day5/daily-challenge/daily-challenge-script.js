@@ -109,37 +109,70 @@
 // 	}
 // }
 
-const array = 'dena';
-const newArr = array.split(['']);
-const secondWord = 'nedt';
-const newSecondWord = secondWord.split(['']);
-console.log('newArr:', newArr);
-console.log('newSecondWord', newSecondWord);
-
-function checking(string1, string2) {
-	var new1 = string1.split(['']);
-	console.log(new1);
-	var new2 = string2.split(['']);
-	console.log(new2);
 
 
-	for (let i=0; i<new1.length; i++){
-		var doesInclude = new2.includes(new1[i]);
-		// console.log(doesInclude);
-		if (new1.length === new2.length){
-			if (doesInclude == true){
-				console.log(`the letter ${new1[i]} is in the word ${string2}`);
-			} else {
-				console.log(`the letter ${new1[i]} does not appear in the word ${string2}, therefor the word ${string1} isn't an anagram of ${string2}`)
-				break
-				// console.log(`${string1} is not an anagram of ${string2}`)
-			};	
-		} else {
-			console.log("the words aren't the same length, not an anagram")
-		}
+
+
+//ziv:
+const anagram = (str1, str2) => {
+	if (str1.length !== str2.length) {
+		return false;
 	}
+	let sort1 = str1.split('').sort();
+	let sort2 = str2.split('').sort();
+	return sort1.join('') === sort2.join('');
 }
 
-// if {doesInclude == true}
 
-// new2.includes(new1[i])
+//daniel did: pretty much the same
+let sort1 = str1.split('').sort().join('');
+let sort2 = str2.split('').sort().join('');	
+return sort1 === sort2
+
+
+//ziv - another way for taking off white spaces:
+let sort1 = str1.split('').filter(item=> item !== '').sort().join('');
+
+
+
+
+
+
+
+
+
+//mine:
+// const array = 'dena';
+// const newArr = array.split(['']);
+// const secondWord = 'nedt';
+// const newSecondWord = secondWord.split(['']);
+// console.log('newArr:', newArr);
+// console.log('newSecondWord', newSecondWord);
+
+// function checking(string1, string2) {
+// 	var new1 = string1.split(['']);
+// 	console.log(new1);
+// 	var new2 = string2.split(['']);
+// 	console.log(new2);
+
+
+// 	for (let i=0; i<new1.length; i++){
+// 		var doesInclude = new2.includes(new1[i]);
+// 		// console.log(doesInclude);
+// 		if (new1.length === new2.length){
+// 			if (doesInclude == true){
+// 				console.log(`the letter ${new1[i]} is in the word ${string2}`);
+// 			} else {
+// 				console.log(`the letter ${new1[i]} does not appear in the word ${string2}, therefor the word ${string1} isn't an anagram of ${string2}`)
+// 				break
+// 				// console.log(`${string1} is not an anagram of ${string2}`)
+// 			};	
+// 		} else {
+// 			console.log("the words aren't the same length, not an anagram")
+// 		}
+// 	}
+// }
+
+// // if {doesInclude == true}
+
+// // new2.includes(new1[i])

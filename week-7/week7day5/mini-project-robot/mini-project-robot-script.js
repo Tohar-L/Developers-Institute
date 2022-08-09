@@ -71,3 +71,62 @@
     }
     ];
     
+    console.log(robots);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const addRobotToPage = (arr) => {
+      const root = document.getElementById('root');
+      root.innerHTML = '';
+      arr.forEach((item, i)=> {
+       const div = document.createElement('div');
+       div.classList.add('dib');
+
+
+       const img = document.createElement('img');
+       img.setAttribute('src', `https://robohash.org/${item.id}size=150*150`);
+       div.appendChild(img);
+
+
+       const h3 = document.createElement('h3');
+       h3.innerText = item.name;
+       div.appendChild(h3);
+
+
+       const h4 = document.createElement('h4');
+       h3.innerText = item.username;
+       div.appendChild(h4);
+
+
+       const p = document.createElement('p');
+       h3.innerText = item.email;
+       div.appendChild(p);
+
+
+       root.appendChild.div;
+     })
+
+
+
+      const search = () => {
+        const searchTxt = document.getElementById('search').value;
+        // const.log(searchTxt);
+        const filterRobots = robots.filter(item =>{
+          return item.name.toLowerCase().includes(searchTxt.toLowerCase());
+        })
+        addRobotToPage(filterRobots);
+      }
+
+
+      addRobotToPage(robots);

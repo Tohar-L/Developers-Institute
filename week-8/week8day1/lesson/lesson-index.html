@@ -6,7 +6,42 @@
 	<title>Document</title>
 </head>
 <body>
-	<!--  -->
+	<script>
+		function onValid(event){
+			console.log(event.target);
+			event.preventDefault();
+			// console.log(event);
+			const email = document.getElementById('email').value;
+			if (email.trim().length>0) {
+				document.getElementById('email').value = email.trim();
+			// 	return true
+			event.target.submit();
+		} else {
+			alert('wrong email');
+			document.getElementById('email').value = email.trim();
+		}
+
+			// 	return false
+		}
+
+
+	</script>
+
+	<!-- <form method="post" action='https://form-method.herokuapp.com/login'> -->
+		<!-- <form name="my" id='my'> -->
+			<!-- //onSubmit="return onValid(event)"-->
+			<!-- <input type = "text" name="email" value="" placeholder="Email"> -->
+			<!-- <input type="text" name="password" value="" placeholder=""password> -->
+			<!-- <input type="submit" name="" value="submit"> -->
+			<!-- </form> -->
+
+
+
+
+
+
+
+			<!--  -->
 
 <!-- <form name="my">
   <input name="one" value="1">
@@ -20,10 +55,10 @@
 
 
 <!-- <form>
-  <label for="age">Age 10</label>
-  <input type="radio" name="age" value="10">
-  <label for="age">Age 20</label>
-  <input type="radio" name="age" value="20">
+	<label for="age">Age 10</label>
+	<input type="radio" name="age" value="10">
+	<label for="age">Age 20</label>
+	<input type="radio" name="age" value="20">
 </form> -->
 
 
@@ -50,9 +85,16 @@
 <!-- what is the meaning of rows and cols? -->
 <!-- <form id="form">
 	<input type="text" name="txt" value="">
-	<textarea name="name" rows="8" cols="80"></textarea>
-</form>
--->
+	<input type="checkbox" name="box" value="1">
+	<select class="" name="">
+		<option value="">Please Select</option>
+		<option value="apple">Apple</option>
+		<option value="grapes">Grape</option>
+		<option value="mellon">Mellon</option>
+	</select>
+	<textarea name="name" rows="5" cols="5">a b c d e </textarea>
+</form> -->
+
 
 
 
@@ -70,6 +112,54 @@
 </select>
 
 
-<script type="text/javascript" src="lesson-script.js"></script>
-</body>
-</html>
+<!-- <form onsubmit="return validate(this)"> -->
+	<!--First: Enter in the input field-->
+	<!-- <input type="text" value="text" name="txt"><br> -->
+	<!--Second: Click "submit":-->
+	<!-- <input type="submit" value="Submit"> -->
+	<!-- </form> -->
+
+
+
+	<!-- <form onsubmit="return validate(this)"> -->
+		<!--First: Enter in the input field-->
+		<!-- <input type="text" value="text" name="txt"><br> -->
+		<!--Second: Click "submit":-->
+		<!-- <input type="submit" value="Submit"> -->
+		<!-- </form> -->
+
+<!-- 		<form onsubmit="return false">
+			<input type="text" size="30" value="Focus here and press enter">
+			<input type="submit" value="Submit" onclick="alert('click')">
+		</form> -->
+
+
+<!-- 		<form id="formElem">
+			<input type="text" name="name" value="John">
+			<input type="text" name="surname" value="Smith">
+			<input type="submit">
+		</form> -->
+
+
+
+
+		<form>
+			<label for="mail">I would like you to provide me with an e-mail address:</label>
+			<input type="email" id="mail" name="mail"><br><br>
+			<label for="name">Your name:
+				<input type="text" id="name" name="name" required>
+				<p>
+					<label>Enter your phone number in the format (123)456-7890
+						<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" size="2"/>-
+						<input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" size="2"/> -
+						<input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" size="3"/>
+					</label>
+				</p>
+				<button>Submit</button>
+			</form>
+
+			
+
+			<script type="text/javascript" src="lesson-script.js"></script>
+		</body>
+		</html>
