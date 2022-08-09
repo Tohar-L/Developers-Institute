@@ -27,7 +27,7 @@ let marioGame = {
 // Convert this JS object into a JSON object. What happens to the nested objects ?
 // the nested objects all appear in the same long string, with curley brackets seperators.
 let jsonMarioGame = JSON.stringify(marioGame, null, 2);
-debugger;
+// debugger;
 console.log(jsonMarioGame);
 
 let marioPars = JSON.parse(jsonMarioGame);

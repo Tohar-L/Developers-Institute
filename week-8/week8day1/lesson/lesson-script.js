@@ -97,35 +97,35 @@ function validate(frm){
 
 
 
-const form  = document.getElementsByTagName('form')[0];
-const email = document.getElementById("mail");
-const name = document.getElementById("name");
-const tel1 = document.getElementsByTagName('tel1');
+// const form  = document.getElementsByTagName('form')[0];
+// const email = document.getElementById("mail");
+// const name = document.getElementById("name");
+// const tel1 = document.getElementsByTagName('tel1');
 
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
-  } else {
-    email.setCustomValidity("");
-  }
-});
+// email.addEventListener("input", function (event) {
+//   if (email.validity.typeMismatch) {
+//     email.setCustomValidity("I am expecting an e-mail address!");
+//   } else {
+//     email.setCustomValidity("");
+//   }
+// });
 
 
-tel1.addEventListener("input", function(event){
-  if (tel1.validity.typeMismatch) {
-    tel1.setCustomValidity("I am expecting 3 digits!");
-  } else {
-    tel1.setCustomValidity("");
-  }
-})
+// tel1.addEventListener("input", function(event){
+//   if (tel1.validity.typeMismatch) {
+//     tel1.setCustomValidity("I am expecting 3 digits!");
+//   } else {
+//     tel1.setCustomValidity("");
+//   }
+// })
 
-form.addEventListener("submit", function (event) {
-  if(!email.validity.valid) {
-    email.setCustomValidity("I am expecting an e-mail address!");
-  } else {
-    email.setCustomValidity("");
-  }
-});
+// form.addEventListener("submit", function (event) {
+//   if(!email.validity.valid) {
+//     email.setCustomValidity("I am expecting an e-mail address!");
+//   } else {
+//     email.setCustomValidity("");
+//   }
+// });
 
 //ziv:
 // let opt = new option('Melon', 'melon') ;
