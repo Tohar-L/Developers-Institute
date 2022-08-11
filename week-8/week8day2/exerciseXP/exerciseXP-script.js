@@ -33,6 +33,7 @@ console.log(jsonMarioGame);
 let marioPars = JSON.parse(jsonMarioGame);
 console.log(marioPars);
 
+
 // Convert and pretty print this JS object into a JSON object. (did this when turned the space number to 2)
 // Use your web inspector to add a breakpoint.(sources, I picked line 29 and 31);
 //Check the values of the JSON object in the debugger.
