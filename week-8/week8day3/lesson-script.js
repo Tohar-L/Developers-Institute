@@ -7,11 +7,14 @@ let xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://jsonplaceholder.typicode.com/users', false);
 
 // 'GET', 'POST', 'DELETE';
+// xhr.send(JSON.stringify{name:'sss'});
+// xhr.send([body]);
 // xhr.send();
 
-
-
-
+xhr.onload = function() {
+	// console.log(xhr.response);
+	console.log(JSON.parse(xhr.response)); //------should show a object with objects inside.
+}
 
 
 

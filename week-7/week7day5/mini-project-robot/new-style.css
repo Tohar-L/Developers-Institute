@@ -1,8 +1,8 @@
 .dib {
 	display: inline-block;
 	border: 1 px solid #ccc;
-	padding: 25px;
-	margin: 20px;
+	padding: 15px;
+	margin: 10px;
 	text-align: center;
 	background-color: cyan;
 }
