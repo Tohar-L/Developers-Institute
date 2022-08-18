@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel = "stylesheet" href = "website-layout-template-style.css">
-
 	<title>Document</title>
 </head>
 <body>
@@ -53,6 +52,43 @@
 			<div class = "box zone"><img src="sunset.jpg">5th</div>
 			<div class = "box zone"><img src="night-out.jpg">6th</div>
 		</div>
+
+
+
+
+
+		<label>ON CHANGE</label>
+		<input type="text" id="input1">
+		<span id="result1"></span>
+
+		<br/><br/>
+
+		<label>ON INPUT</label>
+		<input type="text" id="input2">
+		<span id="result2"></span>
+
+
+
+
+
+
 		<footer class = "zone yellow">Footer</footer>
+
+
+		<script type="text/javascript">
+			let newInput1 =  document.getElementById('input1')
+			newInput1.onchange = function() {
+				document.getElementById('result1').innerHTML = this.value;
+			};
+
+			//On Input : event triggers every time after a value is modified by the user. 
+
+			let newInput2 =  document.getElementById('input2')
+			newInput2.oninput = function() {
+				document.getElementById('result2').innerHTML = this.value;
+			};
+
+			
+		</script>
 	</body>
 	</html>

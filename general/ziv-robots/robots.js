@@ -92,7 +92,7 @@ const input = document.getElementById('search');
 input.addEventListener('input', (event) => {
   const searchTxt = event.target.value;
   console.log(searchTxt);
-  
+
   const filterRobots = robots.filter(item => {
     return item.name.toLowerCase().includes(searchTxt.toLowerCase());
   })

@@ -118,6 +118,21 @@ a{
 	width: 100%; /*----- i can leave this on, right now it just makes the pictures fill the whole box(which is good), but because of the padding in the box it won't b 100% anyway*/
 }
 
+
+
+
+#result1{
+	border : 2px solid hotpink;
+	padding: 3px
+}
+
+#result2{
+	border : 2px solid red;
+	padding: 3px
+}
+
+
+
 footer {
 	text-align: center;
 }

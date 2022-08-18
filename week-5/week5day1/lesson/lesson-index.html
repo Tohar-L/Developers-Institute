@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		.stylish{
+			background-color: pink;
+			border: 2px solid yellow;
+		}
+
+		div { border : 2px solid blue}
+		button { border : 2px solid red}
+		section { border : 2px solid black}
+
+		#result1{
+			border : 2px solid blue;
+			padding: 3px
+		}
+		#result2{
+			border : 2px solid red;
+			padding: 3px
+		}
+
+	</style>
+	<title>Document</title>
+</head>
+<body>
+
+	<form name="my">
+		<input name="one" value="1">
+		<input name="two" value="2">
+	</form>
+
+	<input type="text" onchange="alert(this.value)">
+
+
+	<form>
+		<input type="button" id="button" name="test" value="click me" onclick="inform()"> click to find out.<br><br>
+		<input type="button" id="button2" name="test2" value="pass over me">
+		<input type="button" id="button3" name="test3" value="click me twice">
+	</form>
+
+	<button id="jsstyle" style="background-color:red" >Style</button> 
+
+
+	<section id="section">
+		<div id="div">
+			<button id="btn">Click me</button>
+		</div>
+	</section>
+
+
+	<label>ON CHANGE</label>
+	<input type="text" id="input1">
+	<span id="result1"></span>
+
+	<br/><br/>
+
+	<label>ON INPUT</label>
+	<input type="text" id="input2">
+	<span id="result2"></span>
+
+
+
+
+
+	<script type="text/javascript">
+
+
+		// let x = document.getElementById("btn")
+		// let y = document.getElementById("div")
+		// let z = document.getElementById("section")
+
+		// x.addEventListener("click", XRespondClick); 
+		// y.addEventListener("click", YRespondClick); 
+		// z.addEventListener("click", ZRespondClick); 
+
+		// function XRespondClick(e) { 
+		// 	alert("BTN is Clicked")
+		// }    
+
+		// function YRespondClick(e) { 
+		// 	alert("DIV is Clicked")
+		// }    
+
+		// function ZRespondClick(e) { 
+		// 	alert("SECTION is Clicked")
+		// }  
+
+		//Result if I click on the button
+        // Alert : BTN is Clicked
+        // Alert : DIV is Clicked
+        // Alert : SECTION is Clicked
+        // --> The event is triggered from the element that its clicked to the top
+
+
+
+
+
+
+        let x = document.getElementById("btn")
+        let y = document.getElementById("div")
+        let z = document.getElementById("section")
+
+        x.addEventListener("click", XRespondClick, true); 
+        y.addEventListener("click", YRespondClick, true); 
+        z.addEventListener("click", ZRespondClick, true); 
+
+        function XRespondClick(e) { 
+        	alert("BTN is Clicked")
+        }    
+
+        function YRespondClick(e) { 
+        	alert("DIV is Clicked")
+        }    
+
+        function ZRespondClick(e) { 
+        	alert("SECTION is Clicked")
+        }  
+		//Result if I click on the button
+        // Alert : SECTION is Clicked
+        // Alert : DIV is Clicked
+        // Alert : BTN is Clicked
+        // --> The event is triggered from the top to the element that what clicked 
+
+
+
+
+
+
+
+
+
+        document.getElementById('jsstyle').onclick = function() {
+        	document.appendClass('stylish');
+        };
+
+        function inform() {
+        	alert('one - you clicked me! I love it');
+        }
+
+        document.getElementById('button2').onmouseover = function() {
+        	alert ('you touched me')
+        }
+
+        document.getElementById('button3').ondblclick = function() {
+        	alert('oooh, you double clicked me');
+        }
+
+
+    </script>
+</body>
+</html>

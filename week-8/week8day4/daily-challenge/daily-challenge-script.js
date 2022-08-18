@@ -4,27 +4,76 @@
 //on the search of the user (ie. If the search is “sun”,
 // append on the page one gif with a category of “sun”).
 
+// https://api.giphy.com/v1/gifs/search?q=sun&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+// https://api.giphy.com/v1/gifs/search?q${input}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+
 let xhr = new XMLHttpRequest();
 
-const input = document.getElementById('search');
-input.addEventListener('input', (event) => {
-	const searchTxt = event.target.value;
-	console.log(searchTxt);
+let root = document.getElementById('root');
+console.log(root);
+
+xhr.onload = function(){
+	if(xhr.status != 200){
+		alert(`Error ${xhr.status} - ${xhr.statusText}`)
+	}
+	else {
+	}
+};
+
+
+document.getElementById('myForm').addEventListener('submit', function(event){
+	event.preventDefault();
+	submitForm();
 });
 
-// const input = '';
+document.getElementById('erase').addEventListener('click', function(){
+	root.innerHTML = '';
+});
+
+
+function submitForm() {
+	const input = document.getElementById('search').value;
+	let data = `https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=${API_KEY}&limit=1&offset=${getRandom()}`;
+	xhr.open('GET',data);
+	xhr.responseType = 'json';
+	xhr.send();
+}
+
+function getRandom(num = 50){
+	return Math.floor(Math.random()*50)
+}
+
+
+const input = '';
 // input.addEventListener('input', (event) => {
-// 	const searchTxt = input.value;
+// 	const input = input.value;
 // 	console.log(searchTxt);
+// });
+
+function bbb() {
+	xhr.withCredentials = true;
+
 
 // 	const button = getElementById('btn');
 // 	button.addEventListener('onclick', (event) => {
-	xhr.open('GET',`https://api.giphy.com/v1/gifs/search?q=${input}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&limit=1`);
-	xhr.send();
+	
+
+
+	xhr.responseType = 'json';
 	xhr.onload = function() {
-		console.log(JSON.parse(xhr.responseText));
+		if(xhr.status !== 200) {
+			console.log(xhr.statusText);
+		} else {
+		}
+			// const input = document.getElementById('search');
+			// input.addEventListener('input', (event) => {
+			// 	const searchTxt = event.target.value;
+			// 	console.log(searchTxt);
+			// });
+			// console.log(xhr.response);
+		// }
 	}
-// 	} )
+}
 // });
 
 

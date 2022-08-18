@@ -4,22 +4,33 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
-		.gif{
+		/*.gif{
 			border: 2px solid red;
 			height: 30px;
 			width: 30px;
-		}
+		}*/
 	</style>
 	<title>Document</title>
 </head>
 <body>
-	<form>
-		<input type="text" id="search" placeholder="sun">Enter Gif Search Category
-		<button id="btn">search</button>
-		<div id="root"></div>
 
-		<!-- <div></div> -->
+	<form id="myForm">
+		<div>
+			<label for="search">Enter Gif Search Category</label>
+			<input name="search" id="search" value="">
+			<button>search</button>
+		</div>
 	</form>
-	<script type="text/javascript" src="daily-challenge-script.js"></script>
+
+
+
+	<div>
+		<button id="erase">Erase All</button>
+	</div>
+
+
+	<div id="gifs"></div>
+	
+	<script type="text/javascript" src="good-dch-script.js"></script>
 </body>
 </html>
